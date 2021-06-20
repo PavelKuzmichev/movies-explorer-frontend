@@ -1,13 +1,14 @@
 
 .promo {
   background-color: rgb(92, 92,92); 
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
   box-sizing: border-box;
   width: 100%;
   max-width: 1280px;
-  min-height: 560px;
+  min-height: 630px;
  margin: 0;
 }
 .promo__title {
@@ -21,6 +22,35 @@
 line-height: 52px;
   width: 100%;
   max-width: 640px;
-  margin: 50px auto 102px 70px;
+  margin: 50px auto 110px 70px;
   color: #fff;
+}
+@media screen and (max-width: 769px) {
+  .promo {
+    min-height: 844px;
+    padding: 0 0 70px;
+  }
+
+  .promo__title {
+    text-align: center;
+    margin: 300px auto 140px auto;
+  }
+
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+  .promo {
+    padding: 0 0 40px;
+    min-height: 630px;
+  }
+
+  .promo__title {
+    font-size: 31px;
+    line-height: 39px;
+    padding: 183px 0 60px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }

@@ -1,0 +1,80 @@
+
+.cards {
+  padding: 0 70px 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 80px auto;
+  width: 320px;
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.21;
+  color:  #000000;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.more:hover {
+  opacity: 0.4;
+  transition: opacity 0.5s ease-out;
+}
+
+.more:focus {
+  outline: none;
+}
+
+
+
+@media screen and (max-width: 1265px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 70px 70px 30px;
+  }
+}
+@media screen and (max-width: 1262px) {
+  .cards {
+    grid-gap: 30px;
+    justify-items: stretch;
+    
+  }}
+
+@media screen and (max-width: 1220px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .cards {
+    
+    padding: 70px 30px 60px 30px;
+  }
+}
+
+  @media screen and (max-width: 767px) {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 auto;
+    }
+    
+  }
+
+
+@media screen and (max-width: 450px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 300px;
+    padding: 50px 10px; 
+  }
+
+
+}
