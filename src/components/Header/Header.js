@@ -7,7 +7,7 @@ import account from "../../images/background-account.svg";
 import Navigation from "./../Navigation/Navigation";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 function Header() {
-  const loggedIn = true;
+  const loggedIn = true;  //до регистрации или после
 
   const [isOpen, setIsOpen] = useState(false);
   const handleBurgerMenuClick = () => setIsOpen(!isOpen);

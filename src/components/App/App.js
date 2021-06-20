@@ -12,6 +12,7 @@ import Login from "../Login/Login";
 import "./App.css";
 
 function App() {
+    //настройка для отображения до регистрации или после регистрации в header.js
     return (
         <div className="App">
             <div className="page-container">
