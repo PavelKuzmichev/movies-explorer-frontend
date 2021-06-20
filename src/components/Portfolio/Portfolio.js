@@ -1,4 +1,4 @@
-import './Portfolio.css';
+import "./Portfolio.css";
 
 function Portfolio() {
   return (
@@ -6,7 +6,8 @@ function Portfolio() {
       <div className="portfolio__container">
         <h2 className="portfolio__title">Портфолио</h2>
         <a
-          className="portfolio__link-site"  href="https://github.com/PavelKuzmichev/how-to-learn"
+          className="portfolio__link-site"
+          href="https://github.com/PavelKuzmichev/how-to-learn"
           target="_blank"
           rel="noreferrer"
         >

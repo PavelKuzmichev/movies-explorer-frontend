@@ -1,32 +1,26 @@
 .promoimage {
-  max-width: 722px;
-  margin: 0 70px 60px auto;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-
-
+    max-width: 722px;
+    margin: 0 70px 60px auto;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
 }
+
 @media screen and (max-width:800px) {
-  .promoimage {
-    
-    margin: 0 auto 60px auto;
-    max-width: 680px;
-  
-  
-  }
+    .promoimage {
+        margin: 0 auto 60px auto;
+        max-width: 680px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  
-
-.promoimage {
-  width: 680px;
-  height: 230px;
-  margin: 0 auto;
-  position: absolute;
-  right: -180px;
-  top: 360px;
-  overflow: hidden;
-}
+    .promoimage {
+        width: 680px;
+        height: 230px;
+        margin: 0 auto;
+        position: absolute;
+        right: -180px;
+        top: 360px;
+        overflow: hidden;
+    }
 }

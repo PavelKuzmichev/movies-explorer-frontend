@@ -2,7 +2,6 @@ import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardList({ cards }) {
-
   return (
     <>
       <section className="cards">

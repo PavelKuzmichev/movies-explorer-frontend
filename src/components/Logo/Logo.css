@@ -1,8 +1,9 @@
-.logo{
-  opacity: 1;
-  transition: opacity 0.5s ease-out;
+.logo {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
 }
+
 .logo:hover {
-  opacity: 0.4;
-transition: opacity 0.5s ease-out;
+    opacity: 0.4;
+    transition: opacity 0.5s ease-out;
 }

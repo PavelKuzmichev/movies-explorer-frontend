@@ -1,6 +1,5 @@
 import AuthForm from "../AuthForm/AuthForm";
 
-
 const Register = () => {
   return (
     <AuthForm
@@ -8,7 +7,7 @@ const Register = () => {
       buttonName="Зарегистрироваться"
       text="Уже зарегистрированы?"
       textLink="Войти"
-      linkPath='/signin'
+      linkPath="/signin"
     ></AuthForm>
   );
 };
