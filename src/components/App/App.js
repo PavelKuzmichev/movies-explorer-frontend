@@ -14,7 +14,7 @@ import "./App.css";
 function App() {
     //настройка для отображения до регистрации или после регистрации в header.js
     return (
-        <div className="App">
+        <div className="app">
             <div className="page-container">
                 <Switch>
                     <Route exact path="/">
