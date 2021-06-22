@@ -1,7 +1,10 @@
 .card__image {
+    width: 21vw;
     max-width: 270px;
 }
-
+.card {
+    max-width: 270px;
+}
 .card__title {
     margin: 14px 0 0 0;
     padding-bottom: 29px;
@@ -82,7 +85,7 @@
         max-width: 339px;
     }
     .card {
-        width: 339px;
+        max-width: 339px;
     }
 }
 

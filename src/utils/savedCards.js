@@ -1,4 +1,4 @@
-import movieImg1 from '../images/card-image-1.png';
+import movieImg1 from '../images/movieImg1.svg';
 import movieImg2 from '../images/movieImg2.svg';
 import movieImg3 from '../images/movieImg3.svg';
 const savedCards = [
