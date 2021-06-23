@@ -1,0 +1,115 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1280px;
+    padding: 80px 70px 20px;
+    background-color: #FAFAFA;
+}
+
+.footer__about {
+    font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16px;
+    box-sizing: border-box;
+    margin: 0 0 17px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #A0A0A0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__date {
+    font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16px;
+    margin: 2px 0 0;
+    color: rgba(0, 0, 0, 1);
+}
+
+.footer__links {
+    display: flex;
+    margin: 0 4px 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer__links li {
+    margin-right: 20px;
+}
+
+.footer__links li:last-of-type {
+    margin-right: 0;
+}
+
+.footer__link {
+    font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16px;
+    transition: opacity ease-in .2s;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.footer__link:hover {
+    opacity: 0.4;
+    transition: opacity 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+        padding: 79px 10px 10px;
+        min-width: 320px
+    }
+    .footer__about {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 28px;
+    }
+    .footer__container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer__date {
+        font-size: 12px;
+        line-height: 15px;
+        order: 1;
+        color: #8b8b8b;
+    }
+    .footer__links {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 28px;
+    }
+    .footer__links li {
+        margin: 0 0 9px;
+    }
+    .footer__links li:last-of-type {
+        margin-bottom: 0;
+    }
+    .footer__link {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

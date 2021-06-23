@@ -1,0 +1,113 @@
+.card__image {
+    width: 21vw;
+    max-width: 270px;
+}
+.card {
+    max-width: 270px;
+}
+.card__title {
+    margin: 14px 0 0 0;
+    padding-bottom: 29px;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__time {
+    color: #A0A0A0;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.card__button {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    background: #F9F9F9;
+    background-image: url("../../images/save.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    background-image: url("../../images/unsave.svg");
+    opacity: 0.4;
+    transition: all 0.5s ease-out;
+}
+
+.card__button:focus {
+    outline: none;
+}
+
+.card__button_save {
+    background-image: url("../../images/unsave.svg");
+}
+
+.card__button_remove {
+    background-image: url("../../images/button-remove.svg");
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.card__button_remove:hover {
+    background-image: url("../../images/button-remove.svg");
+    opacity: 0.4;
+    transition: opacity 0.5s ease-out;
+}
+
+@media screen and (max-width: 1262px) {
+    .card__image {
+        width: 339px;
+        max-width: 339px;
+    }
+    .card {
+        max-width: 339px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card__image {
+        width: 339px;
+    }
+    .card {
+        width: 339px;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card {
+        max-width: 300px;
+    }
+    .card__image {
+        width: 300px;
+    }
+    .more {
+        width: 240px;
+    }
+}

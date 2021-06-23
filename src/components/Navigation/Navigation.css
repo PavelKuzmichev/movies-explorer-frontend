@@ -1,0 +1,25 @@
+.header__navigation {
+    display: none;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header__link_saved-films {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.header__link_active {
+    opacity: 0.6;
+}
+
+.header__link_films {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@media (min-width: 769px) {
+    .header__navigation {
+        display: flex;
+    }
+}
