@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 'https://api.kuzpavel1985.nomoredomains.icu';
 
 const checkResponse = (res) => (res.ok ? res.json() : Promise.reject(`Error: ${res.status}`));
 
