@@ -44,7 +44,7 @@
     border: none;
     background-color: #f9f9f9;
     outline: none;
-    color: white;
+    color: black
 }
 
 .form__input:last-of-type {
@@ -67,17 +67,22 @@
     line-height: 12px;
     color: rgba(238, 52, 101, 1);
 }
-
+.form__span-error-button {
+    margin: auto auto 0;
+    opacity: 0;
+  }
+  .form__span-error-button_active {
+    opacity: 1;
+  }
 .form__button {
     height: 45px;
     width: 100%;
     margin: auto 0 0;
     padding: 0;
     display: block;
-    background-color: #2be080;
     border: none;
     border-radius: 3px;
-    color: white;
+    
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -85,8 +90,19 @@
     cursor: pointer;
     outline: none;
 }
-
-.form__button:hover {
+.form__button_active{
+    background-color: #2be080;
+    color: white;
+}
+.form__button_disabled {
+    background: rgb(90, 90, 90);
+   
+  }
+  .form__button_disabled:hover {
+    cursor: default;
+    
+  }
+.form__button_active:hover {
     opacity: 0.8;
     transition: 0.3s linear all;
 }
