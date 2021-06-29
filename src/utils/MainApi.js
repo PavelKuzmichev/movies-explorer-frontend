@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.kuzpavel1985.nomoredomains.icu';
+export
 
 const checkResponse = (res) => (res.ok ? res.json() : Promise.reject(`Error: ${res.status}`));
 
@@ -95,7 +95,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.kuzpavel1985.nomoredomains.icu",
   headers: {
     "Content-Type": "application/json",
   },
