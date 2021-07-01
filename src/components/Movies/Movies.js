@@ -51,13 +51,13 @@ const Movies = (props) =>{
 
   //Эффект показывает короткометражные фильмы
   useEffect(() => {
-    if (isShortMoviesCards === false) {
+    if (!isShortMoviesCards === false && showMovies) {
       setShowMovies(moviesCards);
 
     }
     if (isShortMoviesCards === true && shortFilms) {
       setShowMovies(shortFilms);
-      onSearchFilms(values.name);
+      //onSearchFilms(values.name);
     }
     // eslint-disable-next-line
   }, [isShortMoviesCards, setShowMovies]);

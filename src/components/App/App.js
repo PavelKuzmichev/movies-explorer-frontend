@@ -39,13 +39,19 @@ const App = () => {
 
   useEffect(() => {
     if (loggedIn) {
-       getAllMoviesData();
+      getAllMoviesData();
       handleGetSavedMovies();
+      const lastSeachedMovies = JSON.parse(
+        localStorage.getItem("searchResult")
+      );
+      if (lastSeachedMovies) {
+        setShowMovies(lastSeachedMovies);
+      }
     }
   }, [loggedIn]);
 
   //Сохранение базы фильмов с источника
-  const  getAllMoviesData = () => {
+  const getAllMoviesData = () => {
     setIsLoadingData(true);
     moviesApi
       .searchFilms()
@@ -82,18 +88,19 @@ const App = () => {
   // Поиск фильмов во всей базе
   const searchHandler = (query) => {
     const baseMovies = JSON.parse(localStorage.getItem("baseMovies"));
-        const searchquery = baseMovies.filter((item) => {
+    const searchquery = baseMovies.filter((item) => {
       if (!isShortMoviesCards) {
-        return item.duration <= 40 && item.nameRU.toLowerCase().includes(query);
+        return item.nameRU.toLowerCase().includes(query);
       }
-      return item.nameRU.toLowerCase().includes(query);
+      return item.duration <= 40 && item.nameRU.toLowerCase().includes(query);
     });
+    localStorage.setItem("searchResult", JSON.stringify(searchquery));
+    setMovies(JSON.parse(localStorage.getItem("searchResult")));
 
-    setMovies(searchquery);
     handleSearchFilms(searchquery);
     setIsNotFoundSearch(true);
   };
- 
+
   // Поиск фильмов в базе сохраненных фильмов
   const searchHandlerSaved = (query) => {
     const searchquery = isSavedMovieCards.filter((item) => {
@@ -223,14 +230,17 @@ const App = () => {
         }
       });
   };
- //выхода из аккаунта
- const handleSignOut = () => {
-  const jwt = localStorage.getItem("jwt");
-  if (jwt) {
-    localStorage.removeItem("jwt");
-    setLoggedIn(false);
-  }
-};
+  //выход из аккаунта
+  const handleSignOut = () => {
+    const jwt = localStorage.getItem("jwt");
+    if (jwt) {
+      localStorage.removeItem("searchResult");
+      localStorage.removeItem("jwt");
+      setShowMovies([]);
+      setIsNotFoundSearch(false);
+      setLoggedIn(false);
+    }
+  };
   const tokenCheck = () => {
     mainApi.getContent().then((res) => {
       if (res) {
@@ -252,7 +262,7 @@ const App = () => {
       })
       .catch(() => console.log("Пользователь не найден"));
   };
- 
+
   //Данные пользователя *** редактирование
   const handleUpdateUser = (values) => {
     const { email, name } = values;

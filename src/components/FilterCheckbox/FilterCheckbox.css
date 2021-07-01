@@ -8,7 +8,7 @@
   height: 20px;
   appearance: none;
   padding: 2px;
-  background: #2be080;
+  background: #8b8b8b;
   border-radius: 20px;
   font-size: 30px;
   cursor: pointer;
@@ -17,7 +17,8 @@
 }
 
 .filter-checkbox__switcher:checked {
-  background: #8b8b8b;
+  
+  background: #2be080;
 }
 
 .filter-checkbox__switcher:after {
