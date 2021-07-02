@@ -1,23 +1,34 @@
 import React from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
+
 import "./SearchForm.css";
 
-function SearchForm() {
+function SearchForm(props) {
+  const { onSubmit, handleChange, values, setIsShortMoviesCards, isShortMoviesCards } =
+    props;
+
   return (
     <div className="search-form">
-      <div className="search-form__search-input-wrapper">
+      <form className="search-form__search-input-wrapper" onSubmit={onSubmit}>
         <input
           className="search-form__text-input"
-          type="text"
+          id="movies"
           placeholder="Фильм"
+          type="search"
+          name="name"
           required
+          value={values.name || ""}
+          onChange={handleChange}
         />
         <button className="search-form__button" type="submit">
           Найти
         </button>
-      </div>
+      </form>
       <div className="search-form__shorts-wrapper">
-        <FilterCheckbox />
+        <FilterCheckbox
+          setIsShortMoviesCards={setIsShortMoviesCards}
+          isShortMoviesCards={isShortMoviesCards}
+        />
         <p className="search-form__shorts-title">Короткометражки</p>
       </div>
       <hr className="search-form__hr" />

@@ -1,17 +1,38 @@
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList({ cards }) {
+const MoviesCardList = (props) => {
+  const {
+    showMovies,
+    isSaved,
+    handleLikeButtonClick,
+    isSavedMovieCards,
+    isNotFoundSearch,
+    handleChangeAddMovies,
+  } = props;
+ 
   return (
-    <>
-      <section className="cards">
-        {cards.map((card) => (
-          <MoviesCard card={card} />
-        ))}
-      </section>
-      {cards.length > 11 && <button className="more">Ещё</button>}
-    </>
+    <section className="moviesCardList">
+      {isNotFoundSearch && showMovies.length === 0 ? (
+        <p className="cards_notFound">Ничего не найдено</p>
+      ) : (
+        <ul className="cards">
+          {showMovies.map((item) => {
+            return (
+              <MoviesCard
+                key={item.movieId}
+                item={item}
+                isSaved={isSaved}
+                handleLikeButtonClick={handleLikeButtonClick}
+                isSavedMovieCards={isSavedMovieCards}
+              />
+              
+            );
+          })}
+        </ul>
+      )}{showMovies.length > 3 && <button className="more" onClick={handleChangeAddMovies}>Ещё</button>}
+    </section>
   );
-}
+};
 
 export default MoviesCardList;

@@ -5,7 +5,7 @@
     grid-gap: 20px;
     justify-items: center;
 }
-
+.cards_notFound{padding: 0 70px 50px;}
 .more {
     display: flex;
     align-items: center;

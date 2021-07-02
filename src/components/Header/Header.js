@@ -6,9 +6,8 @@ import { Route, useLocation } from "react-router";
 import account from "../../images/background-account.svg";
 import Navigation from "./../Navigation/Navigation";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-function Header() {
-  const loggedIn = true;  //до регистрации или после
-
+function Header({loggedIn}) {
+  
   const [isOpen, setIsOpen] = useState(false);
   const handleBurgerMenuClick = () => setIsOpen(!isOpen);
   const { pathname } = useLocation();
